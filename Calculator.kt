@@ -21,4 +21,6 @@ fun main(){
         "/" -> if (num2 != 0.0) num1 / num2 else "Error: Division by zero"
         else -> "Error: Invalid operator"
     }
+
+    println("Result; $result")
 }
