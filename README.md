@@ -15,7 +15,16 @@ The goal of this project is to build a **beginner-friendly toolkit** that helps 
 - Access useful references and resources to continue learning.  
 
 **Scope:**  
-This toolkit is designed for complete beginners to Kotlin. It focuses on a **minimal working setup** and a **simple runnable project** that demonstrates the basics of Kotlin. The aim is not to cover advanced topics, but to give a clear, step-by-step entry point into the language.  
+This toolkit is designed for complete beginners to Kotlin. It focuses on a **minimal working setup** and a **simple runnable project** that demonstrates the basics of Kotlin. The aim is not to cover advanced topics, but to give a clear, step-by-step entry point into the language.
+In this toolkit, you have:
+
+Set up Kotlin in VS Code.
+
+Written and run a Hello World program.
+
+Built a Simple Calculator.
+
+Learned how to troubleshoot common issues.  
 
 
 ## 🛠️ Installation & Setup Instructions.
@@ -52,23 +61,50 @@ cd kotlin-beginner-toolkit
 
 ### 3. Install Prerequisites
 
-Before running Kotlin code, install the tools Kotlin depends on.
+Before writing any Kotlin code, make sure you have the required tools installed.
 
 ---
 
-### 3.1 Install Java (JDK 8 or higher)
+#### 3.1 Install Java Development Kit (JDK)
 
-Kotlin runs on the **Java Virtual Machine (JVM)**, so Java must be installed first.
+Kotlin runs on the JVM, so you need Java first.
 
-1. Check if Java is installed:
+1. Update your package index:
    ```bash
-   java -version
-   ```
+   sudo apt update
 
-Example output:
+    Install JDK 11 (or later):
 
-openjdk version "17.0.8" 2023-07-18
-OpenJDK Runtime Environment ...
+sudo apt install openjdk-11-jdk
+
+Verify installation:
+
+    java -version
+
+    Expected output should show openjdk version "11.x.x" or higher.
+
+#### 3.2 Install Kotlin Compiler
+
+Now, install Kotlin itself.
+
+Option 1: Using Snap (recommended, latest version)
+
+sudo snap install --classic kotlin
+
+Option 2: Using Apt (older version)
+
+sudo apt install kotlin
+
+#### 3.3 Verify Kotlin Installation
+
+Run the following to check if Kotlin is installed correctly:
+
+kotlinc -version
+
+You should see output like:
+
+info: kotlinc-jvm 1.x.x
+
 
 
 ### 4. Install VS Code and Extensions
@@ -145,3 +181,40 @@ Now that your setup works, let’s save the progress:
 git add Main.kt
 git commit -m "Add Hello Kotlin program"
 git push origin main
+```
+
+## 🚀 Quickstart
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/name-of-repo.git
+   cd name-of-repo
+
+    Compile Hello World:
+
+kotlinc Main.kt -include-runtime -d Main.jar
+java -jar Main.jar
+
+Run Calculator:
+
+    kotlinc Calculator.kt -include-runtime -d Calculator.jar
+    java -jar Calculator.jar
+
+✅ Done! You’ve run your first two Kotlin programs.
+
+Common Errors & Fixes (Troubleshooting)
+Beginners will get errors. A short list helps:
+
+    command not found: kotlinc → Add Kotlin to PATH.
+
+    java: command not found → Install JDK.
+
+    Calculator division by zero → Handled in code.
+
+📚 Resources / Next Steps
+Links for learning more after the toolkit:
+
+    Official Kotlin Docs
+
+Kotlin Playground (online editor)
+
+Kotlin for Android Developers
